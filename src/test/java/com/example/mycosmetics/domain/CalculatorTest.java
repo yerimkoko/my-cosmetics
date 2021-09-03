@@ -13,14 +13,15 @@ class CalculatorTest {
     @Test
     void 요청_코드를_통해_유효기간_정보를_가져온다() {
         // given
-        String validity = "AA9";
+        String validity = "BA9";
 
         // when
         Calculator calculator = new Calculator(validity);
 
         // then
-        assertThat(calculator.getYear()).isEqualTo(2019);
+        assertThat(calculator.getYear()).isEqualTo(2029);
         assertThat(calculator.getMonth()).isEqualTo(10);
     }
+
 
 }

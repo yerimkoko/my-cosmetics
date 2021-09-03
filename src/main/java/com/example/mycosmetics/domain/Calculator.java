@@ -3,6 +3,7 @@ package com.example.mycosmetics.domain;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+
 @Getter
 @NoArgsConstructor
 public class Calculator {
@@ -15,10 +16,13 @@ public class Calculator {
     public Calculator(String validity) {
 
         String[] date = validity.split("");
+        String first = date[0];
 
+        int tens = (first.charAt(0) - 64) * 10;
 
-        this.year = Integer.parseInt(date[0], 16) + Integer.parseInt(date[2], 16) + STATIC_YEAR;
+        this.year = tens + Integer.parseInt(date[2], 16) + STATIC_YEAR;
         this.month = Integer.parseInt(date[1], 16);
+
     }
 
 }
