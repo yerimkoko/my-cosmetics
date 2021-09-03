@@ -23,5 +23,4 @@ class CalculatorTest {
         assertThat(calculator.getMonth()).isEqualTo(10);
     }
 
-
 }
