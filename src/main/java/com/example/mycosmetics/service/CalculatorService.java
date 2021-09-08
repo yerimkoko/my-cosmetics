@@ -1,8 +1,7 @@
 package com.example.mycosmetics.service;
 
-import com.example.mycosmetics.domain.Calculator;
-import com.example.mycosmetics.dto.CalculatorRequestDto;
-import com.example.mycosmetics.dto.CalculatorResponseDto;
+import com.example.mycosmetics.domain.calculator.Calculator;
+import com.example.mycosmetics.dto.calculator.CalculatorResponseDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -17,6 +16,5 @@ public class CalculatorService {
         Calculator calculator = new Calculator(validity);
         return new CalculatorResponseDto(calculator.getMonth(), calculator.getYear());
     }
-
 
 }
