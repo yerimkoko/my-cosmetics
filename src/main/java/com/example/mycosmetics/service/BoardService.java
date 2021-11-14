@@ -7,8 +7,8 @@ import com.example.mycosmetics.dto.board.BoardRequestDto;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
-import javax.transaction.Transactional;
 
 @Service
 @RequiredArgsConstructor
@@ -24,5 +24,5 @@ public class BoardService {
         Board board = boardRepository.save(dto.toEntity());
         return board;
     }
-
+    
 }

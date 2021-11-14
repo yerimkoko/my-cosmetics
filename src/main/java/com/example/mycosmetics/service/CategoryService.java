@@ -16,8 +16,9 @@ public class CategoryService {
 
     @Transactional
     public Category categoryCreate (CategoryRequestDto dto) {
-        Category category = categoryRepository.save(dto.toEntity());
-        return category;
+         Category category = categoryRepository.save(dto.toEntity());
+         return category;
+
     }
 
 

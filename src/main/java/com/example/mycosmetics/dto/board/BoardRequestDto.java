@@ -37,7 +37,6 @@ public class BoardRequestDto {
                 .memberId(memberId)
                 .name(name)
                 .memo(memo)
-                .categoryId(categoryId)
                 .effectiveDate(effectiveTime)
                 .build();
 

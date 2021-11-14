@@ -23,7 +23,6 @@ public class Calculator extends BaseTimeEntity {
 
         this.year = tens + Integer.parseInt(date[2], 16) + STATIC_YEAR;
         this.month = Integer.parseInt(date[1], 16);
-
     }
 
 }

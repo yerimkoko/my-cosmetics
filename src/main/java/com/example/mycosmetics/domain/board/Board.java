@@ -2,7 +2,6 @@ package com.example.mycosmetics.domain.board;
 
 import com.example.mycosmetics.domain.BaseTimeEntity;
 import com.example.mycosmetics.domain.category.Category;
-import com.example.mycosmetics.domain.category.CategoryRepository;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Builder;
 import lombok.Getter;
@@ -38,17 +37,13 @@ public class Board extends BaseTimeEntity {
     @JoinColumn(name = "category_id")
     private Category category;
 
-    private Long categoryId;
-
     @Builder
-    public Board(Long memberId, String name, LocalDate effectiveDate, String memo, Long categoryId) {
+    public Board(Long memberId, String name, LocalDate effectiveDate, String memo) {
         this.name = name;
         this.effectiveDate = effectiveDate;
         this.memo = memo;
         this.memberId = memberId;
         this.isDeleted = false;
-        this.categoryId = categoryId;
-
     }
 
 }
