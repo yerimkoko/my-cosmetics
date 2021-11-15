@@ -14,5 +14,10 @@ spring:
   jpa:
     properties:
       hibernate:
+        ddl-auto: create
         show_sql: true
         format_sql: true
+
+  sql:
+    init:
+      data-locations: classpath:schema-h2.sql
