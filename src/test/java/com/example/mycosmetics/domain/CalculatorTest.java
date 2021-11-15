@@ -1,5 +1,6 @@
 package com.example.mycosmetics.domain;
 
+import com.example.mycosmetics.domain.calculator.Calculator;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -21,6 +22,18 @@ class CalculatorTest {
         // then
         assertThat(calculator.getYear()).isEqualTo(2029);
         assertThat(calculator.getMonth()).isEqualTo(10);
+    }
+    // testCase: 1) 요청코드가 오류일 때, 2) 요청 코드가 미래 코드 일 때. 3)
+
+    @Test
+    void 요청코드가_오류일때() {
+        // given
+        String validity = "2025";
+
+        // when
+        Calculator calculator = new Calculator(validity);
+
+        // then
     }
 
 }

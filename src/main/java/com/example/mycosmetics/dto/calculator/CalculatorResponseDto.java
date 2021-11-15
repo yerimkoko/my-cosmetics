@@ -1,5 +1,4 @@
-package com.example.mycosmetics.dto;
-
+package com.example.mycosmetics.dto.calculator;
 
 import lombok.Builder;
 import lombok.NoArgsConstructor;
@@ -14,4 +13,5 @@ public class CalculatorResponseDto {
         this.month = month;
         this.year = year;
     }
+
 }

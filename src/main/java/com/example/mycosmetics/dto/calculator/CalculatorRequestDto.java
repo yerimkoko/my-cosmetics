@@ -1,6 +1,5 @@
-package com.example.mycosmetics.dto;
+package com.example.mycosmetics.dto.calculator;
 
-import com.example.mycosmetics.domain.Calculator;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -9,13 +8,11 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class CalculatorRequestDto {
 
-    private String validty;
+    private String validity;
 
     @Builder
     public CalculatorRequestDto(String validity) {
-        this.validty = validity;
+        this.validity = validity;
     }
-
-
 
 }
