@@ -16,13 +16,13 @@ public class MemberService {
     @Transactional
     public Long signUp(MemberSignUpRequestDto requestDto) {
 
-        Member doubleCheckNickName = memberRepository.findByNickName(requestDto.getNickName());
+        Member doubleCheckNickName = memberRepository.findByNickName(requestDto.getName());
 
         if (doubleCheckNickName != null) {
-            throw new IllegalArgumentException(String.format("(%s)는 중복된 닉네임 입니다. 다른 닉네임을 입력해주세요!", requestDto.getNickName()));
+            throw new IllegalArgumentException(String.format("(%s)는 중복된 닉네임 입니다. 다른 닉네임을 입력해주세요!", requestDto.getName()));
         }
 
-        Member member = memberRepository.save(Member.of(requestDto.getEmail(), requestDto.getNickName(), requestDto.getProfileUrl()));
+        Member member = memberRepository.save(Member.of(requestDto.getEmail(), requestDto.getName(), requestDto.getImageUrl()));
 
         return member.getId();
     }
