@@ -10,6 +10,7 @@ spring:
     password:
   profiles:
     include:
+      - oauth
       - jwt
   jpa:
     properties:
