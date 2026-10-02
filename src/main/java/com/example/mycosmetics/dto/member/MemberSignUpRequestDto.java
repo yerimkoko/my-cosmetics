@@ -8,14 +8,14 @@ import lombok.NoArgsConstructor;
 public class MemberSignUpRequestDto {
     private String email;
 
-    private String nickName;
+    private String name;
 
-    private String profileUrl;
+    private String imageUrl;
 
-    public MemberSignUpRequestDto(String email, String nickName, String profileUrl) {
+    public MemberSignUpRequestDto(String email, String name, String profileUrl) {
         this.email = email;
-        this.nickName = nickName;
-        this.profileUrl = profileUrl;
+        this.name = name;
+        this.imageUrl = profileUrl;
     }
 
 

@@ -13,7 +13,7 @@ public class MemberRepositoryCustomImpl implements MemberRepositoryCustom {
     public Member findByNickName(String nickName) {
         return queryFactory.selectFrom(QMember.member)
                 .where(
-                        QMember.member.nickName.eq(nickName)
+                        QMember.member.name.eq(nickName)
                 ).fetchOne();
     }
 
